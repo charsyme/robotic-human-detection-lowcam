@@ -33,18 +33,10 @@ if __name__ == "__main__":
     yolo_urls = {
         'YOLO11n' : 'https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt',
         'YOLO11s': 'https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt'
-
     }
     filename = os.path.join(args.output_dir, args.model)
-
-    model = YOLO(os.path.join(args.output_dir, 'models', 'yolo11s.pt'))
-    model.train(data=args.yaml_fln, epochs=20, imgsz=640, batch=-1)
-
+    os.makedirs(args.output_dir, exist_ok=True)
+    model = YOLO(yolo_urls[args.model])
+    model.train(data=args.yaml_fln, epochs=20, imgsz=640, batch=0.7, save_period=1)
     model_path = Path(os.path.join(args.output_dir,'best.pt'))
     torch.save(model.state_dict(), model_path)
-
-
-
-
-
-
