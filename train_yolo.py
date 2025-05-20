@@ -3,8 +3,6 @@ from pathlib import Path
 import torch
 import argparse
 import os
-import requests
-from tqdm import tqdm
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download and extract COCO dataset.")
