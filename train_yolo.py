@@ -35,6 +35,6 @@ if __name__ == "__main__":
     filename = os.path.join(args.output_dir, args.model)
     os.makedirs(args.output_dir, exist_ok=True)
     model = YOLO(yolo_urls[args.model])
-    model.train(data=args.yaml_fln, epochs=20, imgsz=640, batch=0.7, save_period=1)
+    model.train(data=args.yaml_fln, epochs=20, imgsz=640, batch=-1, save_period=1, project=args.output_dir)
     model_path = Path(os.path.join(args.output_dir,'best.pt'))
     torch.save(model.state_dict(), model_path)
