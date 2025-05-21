@@ -34,6 +34,12 @@ python json2yolo.py --year 2017 --target_dir ./datasets/coco
 python train_yolo.py --model YOLO11n --yaml_fln ./datasets/coco/coco2017_augm.yaml \
 --output_dir ./out/yolo11n
 ```
+## Download pretrained models (YOLO11n/YOLO11s)
+
+```
+python download_pretrained.py --model YOLO11s --save_dir ./out
+```
+
 ## Run inference on a signle image
 
 ```
