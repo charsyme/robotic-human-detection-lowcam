@@ -47,15 +47,15 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     class_names = ['human']
-    if args.model_path!= '':
-        model = YOLO(args.model_path)
+    if args.weights!= '':
+        model = YOLO(args.weights)
 
     else:
         tmp_dir = './tmp'
         os.makedirs(tmp_dir, exist_ok=True)
         model = YOLO(os.path.join(tmp_dir, 'yolo11s.pt'))
 
-    input_tensor, original_img = preprocess_cv2(args.source_img)
+    input_tensor, original_img = preprocess_cv2(args.source)
 
     with torch.no_grad():
         preds = model(input_tensor)[0].boxes.to('cpu')
