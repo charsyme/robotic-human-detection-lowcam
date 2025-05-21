@@ -90,3 +90,4 @@ ultralytics-thop==2.0.14
 urllib3==2.3.0
 wcwidth==0.2.13
 zipp==3.21.0
+gdown
