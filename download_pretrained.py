@@ -28,7 +28,7 @@ if __name__ == "__main__":
         'YOLO11n': '1IOtWK8f5xOICfALLE_qdJyH_SP9NWZTJ'
     }
     os.makedirs(save_dir, exist_ok=True)
-    output = os.path.join(save_dir, f'{args.model}_pretrained.pth')
+    output = os.path.join(save_dir, f'{args.model}_pretrained.pt')
 
     # Build the download URL
     url = f'https://drive.google.com/uc?id={file_ids[args.model]}'
