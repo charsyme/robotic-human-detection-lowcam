@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     save_dir=os.path.join(args.save_dir, args.model)
     file_ids = {
-        'YOLO11s': '1AWXD7abu0v_5UAVNop_X-vP_cEFdRZmj',
+        'YOLO11s': '1JOJps6A0bzSTvU5KTUnSNUL9yQng9RcG',
         'YOLO11n': '1IOtWK8f5xOICfALLE_qdJyH_SP9NWZTJ'
     }
     os.makedirs(save_dir, exist_ok=True)
